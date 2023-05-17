@@ -13,6 +13,7 @@ class AppointmentView(View):
         return render(request, "appointment/index.html", context)
 
     def post(self, request, *args, **kwargs):
+        print ( 'post')
         name = request.POST.get('name')
         phone = request.POST.get('phone')
         email = request.POST.get('email')

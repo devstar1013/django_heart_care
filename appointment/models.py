@@ -15,6 +15,7 @@ class Appointment(models.Model):
         Doctor, on_delete=models.CASCADE, related_name='appointments')
     date = models.DateField(default=timezone.now)
     time = models.CharField(choices=time_choices, max_length=10)
+    
     note = models.TextField(blank=True, null=True)
 
     def __str__(self):
