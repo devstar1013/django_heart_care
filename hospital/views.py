@@ -14,6 +14,7 @@ class HomeView(ListView):
         context = super().get_context_data()
         context['sliders'] = Slider.objects.all()
         context['experts'] = Doctor.objects.all()
+        print ( context)
         return context
 
 
